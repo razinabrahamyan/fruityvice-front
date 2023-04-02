@@ -26,10 +26,6 @@
               <router-link class="nav-link" to="/favorites">Favorites</router-link>
             </li>
           </ul>
-          <div class="form-group d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="title">
-            <button class="btn btn-outline-success" @click="searchItems" :disabled="!title">Search</button>
-          </div>
           <template v-if="isLoggedIn">
             <div class="form-group d-flex mx-1">
               <button class="btn btn-outline-info" @click="logout">Sign out</button>

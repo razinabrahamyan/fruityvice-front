@@ -14,15 +14,6 @@ const routes = [
         children:[]
     },
     {
-        path: "/search/:title",
-        name: "search",
-        props: (route) => ({
-            title: route.params.title,
-        }),
-        component: () => import("@/views/Search"),
-        children:[]
-    },
-    {
         path: "/sigin",
         name: "sigin",
         component: () => import("@/views/Sigin"),
