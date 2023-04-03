@@ -19,3 +19,12 @@ npm run build
 ```
 npm run lint
 ```
+
+## Login
+
+`
+email - user@gmail.com
+`
+`
+pass - 1234
+`
