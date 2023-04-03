@@ -51,6 +51,10 @@ export default {
       }
     }).then((res) => {
       this.favorites = res.data.favorites;
+    }).catch((e)=>{
+      if (e.response.status === 401){
+        this.$router.push(`/Sigin`)
+      }
     })
   },
   methods: {
@@ -65,6 +69,10 @@ export default {
           this.favorites = this.favorites.filter(item => item.id !== res.data.fruityId)
         }else{
           this.favorites.push(res.data.fruity);
+        }
+      }).catch((e)=>{
+        if (e.response.status === 401){
+          this.$router.push(`/Sigin`)
         }
       })
     },

@@ -53,6 +53,10 @@ export default {
     }).then((res) => {
       this.fruits = res.data.fruity;
       this.totalCount = res.data.totalCount;
+    }).catch((e)=>{
+      if (e.response.status === 401){
+        this.$router.push(`/Sigin`)
+      }
     })
     axios.get(`http://127.0.0.1:8000/api/all-favorites`, {
       headers: {
@@ -62,6 +66,10 @@ export default {
       }
     }).then((res) => {
       this.favorites = res.data.favorites;
+    }).catch((e)=>{
+      if (e.response.status === 401){
+        this.$router.push(`/Sigin`)
+      }
     })
   },
   watch:{
